@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+.skills-section {
+  @apply min-h-screen bg-black text-white px-6 py-32;
+}
+
+.skills-container {
+  @apply max-w-6xl mx-auto;
+}
+
+.skills-title {
+  @apply mb-20;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.skills-title h2 {
+  @apply text-5xl md:text-7xl font-light text-gray-500 tracking-tight;
+  font-family: var(--font-space-grotesk);
+}
+
+.skills-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+}
+
+.skill-item {
+  @apply flex items-center gap-4 p-5 rounded-2xl border border-gray-800;
+  @apply hover:border-gray-700 hover:bg-gray-950/50 transition-all;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.skill-icon-wrapper {
+  @apply p-2.5 rounded-xl bg-gray-900 border border-gray-800 flex-shrink-0;
+}
+
+.skill-icon {
+  @apply w-5 h-5 text-gray-400;
+}
+
+.skill-content {
+  @apply flex-1 min-w-0;
+}
+
+.skill-name {
+  @apply text-sm font-medium text-white mb-0.5 truncate;
+  font-family: var(--font-space-grotesk);
+}
+
+.skill-category {
+  @apply text-xs text-gray-500;
+  font-family: var(--font-jetbrains-mono);
+}
+
+@media (max-width: 768px) {
+  .skills-title h2 {
+    @apply text-4xl;
+  }
+
+  .skills-grid {
+    @apply grid-cols-1 gap-3;
+  }
+
+  .skill-item {
+    @apply p-4;
+  }
+}

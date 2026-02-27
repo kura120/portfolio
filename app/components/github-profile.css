@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+.github-profile-section {
+  @apply min-h-screen bg-black text-white px-6 py-32;
+  @apply pt-28;
+  position: relative;
+  z-index: 1;
+}
+
+.github-profile-container {
+  @apply max-w-6xl mx-auto;
+  position: relative;
+  z-index: 2;
+}
+
+.github-profile-loading {
+  @apply flex flex-col items-center justify-center py-32 space-y-4;
+}
+
+.github-profile-loading-icon {
+  @apply w-12 h-12 animate-spin text-gray-500;
+}
+
+.github-profile-loading-text {
+  @apply text-gray-500 text-lg;
+  color: #6b7280 !important;
+}
+
+.github-profile-error {
+  @apply flex items-center justify-center py-32;
+}
+
+.github-profile-error-text {
+  @apply text-gray-500 text-lg;
+  color: #ef4444 !important;
+}
+
+.github-profile-header {
+  @apply flex flex-col md:flex-row gap-8 items-start mb-16;
+  @apply pb-16 border-b border-gray-800;
+}
+
+.github-profile-avatar-wrapper {
+  @apply flex-shrink-0;
+}
+
+.github-profile-avatar {
+  @apply w-32 h-32 rounded-2xl border border-gray-800 object-cover;
+}
+
+.github-profile-info {
+  @apply flex-1 space-y-4;
+}
+
+.github-profile-name {
+  @apply text-4xl md:text-5xl font-light text-white mb-2 tracking-tight;
+  font-family: var(--font-space-grotesk);
+  color: #fff !important;
+}
+
+.github-profile-username {
+  @apply text-xl text-gray-500 font-light;
+  font-family: var(--font-jetbrains-mono);
+  color: #6b7280 !important;
+}
+
+.github-profile-bio {
+  @apply text-gray-400 leading-relaxed max-w-2xl;
+  color: #9ca3af !important;
+}
+
+.github-profile-meta {
+  @apply flex flex-wrap gap-4 text-gray-500 text-sm;
+}
+
+.github-profile-meta-item {
+  @apply flex items-center gap-2;
+}
+
+.github-profile-meta-icon {
+  @apply w-4 h-4;
+}
+
+.github-profile-meta-link {
+  @apply hover:text-white transition-colors;
+}
+
+.github-profile-external-link {
+  @apply inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors;
+  @apply px-4 py-2 rounded-lg border border-gray-800 hover:border-gray-700 hover:bg-white/5;
+  @apply text-sm font-medium;
+}
+
+.github-profile-external-link-icon {
+  @apply w-4 h-4;
+}
+
+.github-profile-stats {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16;
+}
+
+.github-profile-stat-card {
+  @apply flex flex-col items-center gap-2 p-6 rounded-2xl;
+  @apply border border-gray-800 hover:border-gray-700 transition-all;
+  @apply hover:bg-gray-950/50;
+}
+
+.github-profile-stat-icon-wrapper {
+  @apply p-3 rounded-xl bg-gray-900 border border-gray-800;
+}
+
+.github-profile-stat-icon {
+  @apply w-5 h-5 text-gray-400;
+}
+
+.github-profile-stat-content {
+  @apply flex flex-col items-center text-center;
+}
+
+.github-profile-stat-value {
+  @apply text-2xl font-medium text-white;
+  font-family: var(--font-space-grotesk);
+}
+
+.github-profile-stat-label {
+  @apply text-sm text-gray-500;
+}
+
+.github-profile-languages {
+  @apply mb-16;
+}
+
+.github-profile-section-title {
+  @apply text-3xl md:text-4xl font-light text-gray-500 mb-8 tracking-tight;
+  font-family: var(--font-space-grotesk);
+  color: #6b7280 !important;
+}
+
+.github-profile-languages-grid {
+  @apply flex flex-wrap gap-3;
+}
+
+.github-profile-language-item {
+  @apply flex items-center gap-2 px-4 py-2 rounded-full;
+  @apply bg-gray-950 border border-gray-800;
+}
+
+.github-profile-language-dot {
+  @apply w-2.5 h-2.5 rounded-full bg-white;
+}
+
+.github-profile-language-name {
+  @apply text-white text-sm;
+  color: #fff !important;
+}
+
+.github-profile-language-count {
+  @apply text-gray-500 text-xs;
+  font-family: var(--font-jetbrains-mono);
+  color: #6b7280 !important;
+}
+
+.github-profile-repos {
+  @apply mb-16;
+}
+
+.github-profile-repos-grid {
+  @apply grid md:grid-cols-2 gap-6;
+}
+
+.github-profile-repo-card {
+  @apply p-6 rounded-2xl border border-gray-800 hover:border-gray-700;
+  @apply transition-all hover:bg-gray-950/50;
+}
+
+.github-profile-repo-header {
+  @apply flex items-start justify-between mb-4;
+}
+
+.github-profile-repo-title {
+  @apply flex items-center gap-2 text-lg font-medium text-white;
+  @apply hover:text-gray-300 transition-colors;
+  font-family: var(--font-space-grotesk);
+  color: #fff !important;
+}
+
+.github-profile-repo-icon {
+  @apply w-5 h-5;
+  color: #fff !important;
+}
+
+.github-profile-repo-link {
+  @apply text-gray-500 hover:text-white transition-colors;
+}
+
+.github-profile-repo-link-icon {
+  @apply w-4 h-4;
+}
+
+.github-profile-repo-description {
+  @apply text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2;
+  color: #9ca3af !important;
+}
+
+.github-profile-repo-footer {
+  @apply flex flex-wrap items-center gap-4 text-xs text-gray-500 mb-4;
+  font-family: var(--font-jetbrains-mono);
+  color: #6b7280 !important;
+}
+
+.github-profile-repo-meta {
+  @apply flex items-center gap-1.5;
+}
+
+.github-profile-repo-language-dot {
+  @apply w-2.5 h-2.5 rounded-full bg-white;
+}
+
+.github-profile-repo-meta-icon {
+  @apply w-3.5 h-3.5;
+}
+
+.github-profile-repo-updated {
+  @apply text-gray-500;
+}
+
+.github-profile-repo-topics {
+  @apply flex flex-wrap gap-2;
+}
+
+.github-profile-repo-topic {
+  @apply px-3 py-1 rounded-full text-xs;
+  @apply bg-gray-950 text-gray-400 border border-gray-800;
+  @apply hover:border-gray-700 hover:text-gray-300 transition-all;
+  font-family: var(--font-jetbrains-mono);
+}

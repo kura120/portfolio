@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+.contact-section {
+  @apply min-h-screen bg-black text-white px-6 py-32;
+}
+
+.contact-container {
+  @apply max-w-6xl mx-auto;
+}
+
+.contact-header {
+  @apply mb-20 text-center;
+}
+
+.contact-title {
+  @apply text-5xl md:text-7xl font-light text-gray-500 tracking-tight mb-4;
+  font-family: var(--font-space-grotesk);
+}
+
+.contact-subtitle {
+  @apply text-lg text-gray-400;
+}
+
+.contact-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.contact-card {
+  @apply p-8 rounded-2xl border border-gray-800 bg-black;
+  @apply hover:border-gray-700 transition-all duration-300;
+}
+
+.contact-card:hover {
+  @apply bg-gray-950/50;
+}
+
+.contact-card-header {
+  @apply flex items-center gap-2 mb-6;
+}
+
+.contact-card-label {
+  @apply text-sm text-gray-500 font-light;
+  font-family: var(--font-jetbrains-mono);
+}
+
+.contact-loading,
+.contact-error {
+  @apply flex items-center justify-center gap-2 py-12 text-gray-500;
+}
+
+/* Discord Card */
+.contact-discord-profile {
+  @apply flex items-center gap-4 mb-6;
+}
+
+.contact-discord-avatar-wrapper {
+  @apply relative;
+}
+
+.contact-discord-avatar {
+  @apply w-14 h-14 rounded-full border border-gray-800;
+}
+
+.contact-discord-status {
+  @apply absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full border-2 border-black flex items-center justify-center;
+}
+
+.contact-discord-status.online {
+  @apply bg-green-500 text-green-500;
+}
+
+.contact-discord-status.idle {
+  @apply bg-yellow-500 text-yellow-500;
+}
+
+.contact-discord-status.dnd {
+  @apply bg-red-500 text-red-500;
+}
+
+.contact-discord-status.offline {
+  @apply bg-gray-600 text-gray-600;
+}
+
+.contact-discord-info {
+  @apply flex-1;
+}
+
+.contact-discord-name-link {
+  @apply block;
+}
+
+.contact-discord-name {
+  @apply text-lg font-medium text-white mb-0.5 flex items-center;
+  @apply hover:text-blue-400 transition-colors;
+  @apply py-1 px-1;
+}
+
+.contact-discord-name svg {
+  @apply ml-2;
+}
+
+.contact-discord-username {
+  @apply text-sm text-gray-500;
+  font-family: var(--font-jetbrains-mono);
+}
+
+.contact-discord-activity {
+  @apply flex items-start gap-3 p-4 rounded-xl border border-gray-800 bg-gray-950/30;
+}
+
+.contact-activity-info {
+  @apply flex-1;
+}
+
+.contact-activity-name {
+  @apply text-sm font-medium text-white mb-1;
+}
+
+.contact-activity-details {
+  @apply text-xs text-gray-500;
+}
+
+/* GitHub Card */
+.contact-github-content {
+  @apply space-y-4;
+}
+
+.contact-github-link {
+  @apply block;
+}
+
+.contact-github-name {
+  @apply text-2xl font-medium text-white mb-3 flex items-center;
+  @apply hover:text-blue-400 transition-colors;
+  @apply py-1 px-1;
+  font-family: var(--font-space-grotesk);
+}
+
+.contact-github-name svg {
+  @apply ml-2;
+}
+
+.contact-github-description {
+  @apply text-gray-400 leading-relaxed;
+}
+
+/* Email Card */
+.contact-email-content {
+  @apply space-y-4;
+}
+
+.contact-email-link {
+  @apply block;
+}
+
+.contact-email-address {
+  @apply text-xl font-medium text-white mb-3;
+  @apply hover:text-blue-400 transition-colors;
+  font-family: var(--font-jetbrains-mono);
+  word-break: break-all;
+}
+
+.contact-email-description {
+  @apply text-gray-400 leading-relaxed;
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    @apply text-4xl;
+  }
+
+  .contact-grid {
+    @apply gap-4;
+  }
+
+  .contact-card {
+    @apply p-6;
+  }
+}

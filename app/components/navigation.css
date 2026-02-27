@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+.navigation {
+  @apply fixed top-0 left-0 right-0 z-50 transition-all duration-300;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navigation-scrolled {
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navigation-container {
+  @apply max-w-6xl mx-auto px-6 py-4 flex items-center justify-between;
+}
+
+.navigation-logo {
+  @apply text-white text-xl font-light tracking-tight;
+  @apply hover:text-gray-300 transition-colors;
+  font-family: var(--font-jetbrains-mono);
+}
+
+.navigation-desktop {
+  @apply hidden md:flex items-center gap-1;
+}
+
+.navigation-link {
+  @apply flex items-center gap-2 px-4 py-2 rounded-lg text-gray-400;
+  @apply hover:text-white hover:bg-white/5 transition-all;
+  font-family: var(--font-inter);
+  font-size: 0.9rem;
+}
+
+.navigation-link-active {
+  @apply text-white bg-white/5;
+}
+
+.navigation-link-icon {
+  @apply w-4 h-4;
+}
+
+.navigation-mobile-button {
+  @apply md:hidden text-gray-400 hover:text-white transition-colors;
+}
+
+.navigation-mobile {
+  @apply md:hidden border-t border-white/5 bg-black/50 backdrop-blur-xl;
+  @apply flex flex-col;
+}
+
+.navigation-mobile-link {
+  @apply flex items-center gap-3 px-6 py-4 text-gray-400;
+  @apply hover:text-white hover:bg-white/5 transition-all;
+  @apply border-b border-white/5;
+  font-family: var(--font-inter);
+}
+
+.navigation-mobile-link:last-child {
+  @apply border-b-0;
+}
+
+.navigation-mobile-link-active {
+  @apply text-white bg-white/5;
+}
+
+.navigation-mobile-link-icon {
+  @apply w-5 h-5;
+}

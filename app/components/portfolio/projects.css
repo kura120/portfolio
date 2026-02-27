@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* Projects Section */
+.projects-section {
+  @apply min-h-screen bg-black text-white py-32 px-6;
+}
+
+.projects-container {
+  @apply max-w-6xl mx-auto;
+}
+
+.projects-header {
+  @apply mb-16;
+}
+
+.projects-title {
+  @apply text-5xl md:text-6xl font-light mb-8;
+}
+
+.projects-github-link-section {
+  @apply flex items-center gap-3;
+}
+
+.projects-github-link {
+  @apply flex items-center gap-2 text-gray-400 hover:text-white transition-colors;
+}
+
+.projects-github-text {
+  @apply text-sm;
+}
+
+.projects-grid {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.projects-card {
+  @apply relative bg-gray-900 rounded-2xl p-6 border border-gray-800 hover:border-gray-700 transition-all;
+}
+
+.projects-card-content {
+  @apply space-y-4;
+}
+
+.projects-card-header {
+  @apply flex items-start justify-between;
+}
+
+.projects-card-title {
+  @apply text-xl font-medium text-white transition-colors;
+}
+
+.projects-card-links {
+  @apply flex gap-2;
+}
+
+.projects-card-link {
+  @apply text-gray-400 hover:text-white transition-colors;
+}
+
+.projects-card-description {
+  @apply text-gray-400 text-sm leading-relaxed line-clamp-3;
+}
+
+.projects-tags-container {
+  @apply flex flex-wrap gap-2;
+}
+
+.projects-tag {
+  @apply text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300;
+}
+
+.projects-stats {
+  @apply flex gap-4 text-xs text-gray-400;
+}
+
+.projects-stat-item {
+  @apply flex items-center gap-1;
+}
+

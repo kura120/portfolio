@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* Hero Section */
+.hero-section {
+  @apply min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden px-6;
+}
+
+.hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 50% at 50% 50%,black,transparent);
+}
+
+.hero-container {
+  @apply relative z-10 max-w-6xl w-full;
+}
+
+.hero-content-wrapper {
+  @apply flex flex-col md:flex-row gap-16 items-center;
+}
+
+.hero-text-section {
+  @apply space-y-8 flex-1;
+}
+
+.hero-heading-section {
+  @apply space-y-4;
+}
+
+.hero-main-heading {
+  @apply text-5xl md:text-7xl lg:text-8xl tracking-tight;
+}
+
+.hero-heading-italic {
+  @apply italic font-serif text-gray-400;
+}
+
+.hero-heading-normal {
+  @apply text-gray-500 font-light;
+}
+
+.hero-description {
+  @apply text-lg md:text-xl text-gray-400 font-light max-w-2xl leading-relaxed;
+}
+
+.hero-cta-section {
+  @apply flex flex-wrap gap-4 items-center pt-4;
+}
+
+.hero-cta-primary {
+  @apply bg-white text-black hover:bg-gray-200 px-8 py-3 rounded-md font-medium transition-all;
+  @apply relative overflow-hidden;
+}
+
+.hero-cta-primary .arrow-icon {
+  @apply transition-all duration-300 ease-out;
+  font-size: 1.2em;
+  display: inline-block;
+  transform-origin: center;
+}
+
+.hero-cta-primary:hover .arrow-icon {
+  transform: scale(1.4) translateX(10px) !important;
+  font-weight: bold;
+}
+
+.hero-cta-secondary {
+  @apply border border-gray-700 text-white hover:border-gray-500 px-8 py-3 rounded-md font-medium transition-all hover:bg-white/5;
+}
+
+.hero-social-section {
+  @apply flex gap-6 pt-8;
+}
+
+.hero-social-link {
+  @apply text-gray-400 hover:text-white transition-colors;
+}
+
+.hero-profile-wrapper {
+  @apply flex-shrink-0;
+}
+
+.hero-profile-image {
+  @apply w-64 h-64 md:w-80 md:h-80 rounded-2xl border border-gray-800 object-cover;
+}
+
+.hero-scroll-indicator {
+  @apply absolute bottom-12 left-1/2 -translate-x-1/2 text-gray-500 hover:text-white transition-colors;
+}
+
