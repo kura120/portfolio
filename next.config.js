@@ -1,8 +1,7 @@
-// next.config.js
+const repoName = 'portfolio';
 module.exports = {
   output: 'export',
-  images: {
-    unoptimized: true
-  },
-  // Add other config options as needed
+  images: { unoptimized: true },
+  basePath: '/' + repoName,
+  assetPrefix: '/' + repoName + '/',
 };
